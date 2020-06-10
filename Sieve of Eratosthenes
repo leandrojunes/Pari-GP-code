@@ -1,0 +1,7 @@
+SieveEra(n) = { my(list=[2..n], p = 2, multiples, position=1);
+while( p <= floor(sqrt(n)),
+multiples=[p*(p+k) | k<-[0..n], p*(p+k)<=n];
+list = setminus(list,multiples);
+position++;
+p = list[position]);
+list}
