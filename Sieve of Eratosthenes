@@ -1,3 +1,8 @@
+\\ Input: A natural number "n"
+\\ Output: A list of all prime numbers less than or equal to "n"
+\\ Algorithm: It uses the original algorithm of Eratosthenes to compute the list of primes. The code is meant to be used in the Pari/GP calculator.
+\\ This program is not recommended for large values of "n"
+
 SieveEra(n) = { my(list=[2..n], p = 2, multiples, position=1);
 while( p <= floor(sqrt(n)),
 multiples=[p*(p+k) | k<-[0..n], p*(p+k)<=n];
