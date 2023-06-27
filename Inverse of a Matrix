@@ -1,6 +1,6 @@
-\\ Input: A matrix "A" of real o complex entries.
+\\ Input: A matrix "A" of real or complex entries.
 \\ Output: The inverse of "A", if it exists.
-\\ This algiorithm is meant to be used for the Pari/GP calculator.
+\\ This algorithm is meant to be used for the Pari/GP calculator.
 matinv(A) = {
              if(matsize(A)[1] != matsize(A)[2]  || matdet(A) == 0,
                 print("The matrix does not have an inverse"),
